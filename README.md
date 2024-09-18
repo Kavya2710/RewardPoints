@@ -1,16 +1,19 @@
-WebAPI Developer
-A retailer offers a rewards program to its customers, awarding points based on each recorded purchase.
- 
-A customer receives 2 points for every dollar spent over $100 in each transaction, plus 1 point for every dollar spent between $50 and $100 in each transaction.
-(e.g. a $120 purchase = 2x$20 + 1x$50 = 90 points).
- 
-Given a record of every transaction during a three month period, calculate the reward points earned for each customer per month and total.
-Solve using Spring Boot,
-Create a RESTful endpoint,
-Make up a data set to best demonstrate your solution,
-Check solution into GitHub.
+Retailer offers a reward program to its customers, awarding points base on each recorded purchase. Need to calculate the points earned for each month and total 
 
-DB Entries:
-Customer
-CustomerTransaction (customerid, spentdetails, amount, date)
-reward points (customerid, month, year, points)
+The code is written on Springboot framework with MVC architecture 
+
+RewardSystemApplication.java : the entry point of teh SpringBoot application 
+RewardController.java : Controller to get rewars and calculate rewar points 
+Entities: 
+Customer.java- represents customer entity 
+CustomerTransaction.java- represents customer transaction 
+entity RewardPoints.java- represents a reward entity 
+Repositories: 
+CustomerTransactionRepository.java-Repository for customer transaction 
+RewardPointsRepository.java- Repository for reward point oprations 
+Services: RewardService.java- Contains bussiness logic for calculating reward points 
+Exception Handling: 
+GlobalExceptionHandler.java- Handles exception globally 
+ApiError.java- Represents the sturcture of error responses 
+Configuration: Application.properties- Configuration details for Springboot application 
+Tests: RewardSystemApplicationTests.java- Unit test cases for reward calculation logic
